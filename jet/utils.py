@@ -320,7 +320,7 @@ def get_menu_items(context):
         app_list = []
 
         def get_menu_item_app_model(app_label, data):
-            item = {'has_perms': True}
+            item = {'has_perms': False}
 
             if 'name' in data:
                 parts = data['name'].split('.', 2)
@@ -364,7 +364,7 @@ def get_menu_items(context):
             if app_label in original_app_list:
                 item = original_app_list[app_label].copy()
             else:
-                item = {'app_label': app_label, 'has_perms': True}
+                item = {'app_label': app_label, 'has_perms': False}
 
             if 'label' in data:
                 item['label'] = data['label']
