@@ -225,7 +225,7 @@ Select2.prototype = {
         $('select:not([data-autocomplete-light-function])').trigger('select:init');
 
         $('.inline-group').on('inline-group-row:added', function(e, $inlineItem) {
-            $inlineItem.find('select').trigger('select:init');
+            $inlineItem.find('select:not([data-autocomplete-light-function])').trigger('select:init');
         });
     },
     run: function() {
